@@ -7,6 +7,9 @@ def generar_legajos():
     return legajos
 
 def iniciar_recaudacion():
+    """
+    crea la matriz de recaudacion
+    """
     matriz = []
     for i in range(3):
         fila = [0.0, 0.0, 0.0, 0.0, 0.0]
@@ -84,6 +87,8 @@ def mostrar_matriz_recaudacion(matriz):
 
         for j in range(len(matriz[i])):
             print(matriz[i][j], end=" ")
+        print()
+        
     print()
 
 def recaudacion_por_linea(matriz):
@@ -119,6 +124,10 @@ def recaudacion_total(matriz):
 
 
 def men():
+
+    """
+    muestra el menu del sistema
+    """
     legajos_sistema = generar_legajos()
     recaudaciones = iniciar_recaudacion()
 
@@ -126,16 +135,13 @@ def men():
 
 
     while True:
-        print("===========================================")
         print("      SISTEMA DE GESTION DE TRANSPORTE     ")
-        print("===========================================")
         print("1. cargar plantilla de recaudacion")
         print("2. Mostrar la recaudacion de cada coche y linea")
         print("3. calcular y mostrar la recaudacion de linea")
         print("4. calcular y mostrar la recaudacion del coche")
         print("5. calcular y mostrar la recaudacion total")
         print("6. salir del programa")
-        print("=============================================")
 
 
         opcion = input("seleccione una opcion: ")
